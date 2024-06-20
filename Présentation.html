@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Présentation de ma structure d'accueil</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body class="img" id="bgimg">
+    <div id="header"></div>
+    <script>
+      fetch("header.html") // créer une requête pour récupérer le contenu du fichier header.html
+        .then((response) => response.text()) // convertir la réponse en texte
+        .then((data) => {
+          // une fois que le texte est récupéré
+          document.getElementById("header").innerHTML = data; // insérer le texte dans la div au dessus ;-)
+        });
+    </script>
+    
+    <main class="ttx" >
+      <h4>Le site de la grande dune du Pilat est géré par un établissement public organisé en syndicat Mixte qui est l'association de plusieurs collectivitées territoriales.<br>
+      Le Syndicat Mixte de la grande dune du pilat est composé de la Région Nouvelle Aquitaine, du département de la Gironde et de la commune de la Teste de Buch.<br></h4>
+      
+ <br> <h2><b>Voici ses différents rôles</b></h2>
+  <ul>
+    <li>La gestion pulique des terrains du Grand site confiés par le conservatoire du littoral.<br></li>
+    <li>Le Syndicat Mixte oeuvre pour protéger ces milieux fragileset assure la valorisation et leur visite dans les meilleurs conditions d'accueil.<br></li>
+    <li>L'action publique est guidée par le politique du reseau des grands sites de France, initiée par l'Etat, à l'image de la Dune du Pilat, à des paysages exceptionnels de notre partimoine.<br></li>
+    </ul>
+      
+   </main>
+    <div id="footer"></div>
+    <script>
+      fetch("footer.html") // créer une requête pour récupérer le contenu du fichier footer.html
+        .then((response) => response.text()) // convertir la réponse en texte
+        .then((data) => {
+          // une fois que le texte est récupéré
+          document.getElementById("footer").innerHTML = data; // insérer le texte dans la div au dessus ;-)
+        });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+   </body>
+</html>

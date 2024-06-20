@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  
+
+</head>
+
+<body>
+  <div id="header"></div>
+  <script>
+    fetch('header.html') // créer une requête pour récupérer le contenu du fichier header.html
+      .then(response => response.text()) // convertir la réponse en texte
+      .then(data => { // une fois que le texte est récupéré
+        document.getElementById('header').innerHTML = data; // insérer le texte dans la div au dessus ;-)
+      });
+  </script>
+  <main>
+
+
+
+  </main>
+  <div id="footer"></div>
+  <script>
+    fetch('footer.html') // créer une requête pour récupérer le contenu du fichier footer.html
+      .then(response => response.text()) // convertir la réponse en texte
+      .then(data => { // une fois que le texte est récupéré
+        document.getElementById('footer').innerHTML = data; // insérer le texte dans la div au dessus ;-)
+      });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+</html>
